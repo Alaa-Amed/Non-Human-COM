@@ -10,4 +10,25 @@ Based on the research I've conducted on the topic of IC, in the form of semi-str
 > could have a way of communicating with plants, it may lead to [them] being better at taking care of them.
 
 ## Plant-Human Communication
-The way I envisioned IC is by giving plants feelings, thoughts, a personality, and an overall sense of autonomy. The goals for this project was 
+The goal for this project was to create a system with which plants and humans can develop a meaningful relationship. The way I envisioned IC is by giving plants feelings, thoughts, a personality, and an overall sense of autonomy. I wanted to do that by implementing an "organic" speech generator for the plant in question so that they could express themselves, however that proved difficult to achieve. So, instead I decided to abstract the communication by outputting interactive art that is altered by plant state.
+
+## The Build
+The project consists of two main components, the plant & the visual output.
+
+
+To recreate this project, you will need:
+- 1x Adafruit IO compatible Feather
+- 3x jumper wires
+- 1x 10k resistor
+- 1x photocell
+- 1x plant(s) of your choosing
+- Embroidery hoop
+- Invisible Wire
+
+
+** all materials can be found at [Blick Art Materials](https://www.dickblick.com/)
+
+### Data input
+Arduino Wiring
+
+![wiring](photo.png)
