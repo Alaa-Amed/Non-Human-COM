@@ -60,3 +60,9 @@ Download the processing software and run the code named processing.
 Here is what the processing code looks like:
 
 ![wiring](pro.png)
+
+If you run the code and communication is successful between Arduino and Processing, then you should see an output like this:
+
+![wiring](al.png)
+
+The picture on the left shows with the data viz looks like when it's dark and it is meant to mimic the state of the plant. As more light increases, you see more colorful and bright output. 
