@@ -17,9 +17,10 @@ The project consists of two main components, the plant & the visual output.
 
 
 To recreate this project, you will need:
-- 1x Adafruit IO compatible Feather
-- 3x jumper wires
+- 2x Adafruit IO compatible Feather
+- Jumper wires
 - 1x 10k resistor
+- OLED display
 - Processing
 - 1x photocell
 - 1x plant(s) of your choosing
@@ -29,6 +30,8 @@ To recreate this project, you will need:
 
 ** all materials can be found at [Blick Art Materials](https://www.dickblick.com/)
 
+Decorate your hoop with plants however you see fit. Mine looks like this:
+![wiring](k.png)
 ### Data input
 The main way plants are going to input their state is via sensors. I've chosen to work with a photoresistor because you can get a lot of variance in data points, which in turn creates a more visually-pleasing output.
 
@@ -65,4 +68,12 @@ If you run the code and communication is successful between Arduino and Processi
 
 ![wiring](al.png)
 
-The picture on the left shows with the data viz looks like when it's dark and it is meant to mimic the state of the plant. As more light increases, you see more colorful and bright output. 
+
+The picture on the left shows with the data viz looks like when it's dark and it is meant to mimic the state of the plant. As more light increases, you see more colorful and bright output.
+
+The idea now is to map this data viz on your physical plant using a projector or you can display on a wall, a screen, or a different object.
+
+
+Now for the last step, get the other feather and upload the LCD code. The code enables you to subscribe to the MQTT topic we set up and get a sentence back when it get too dark. Example output:
+
+![wiring](2.png)
