@@ -20,6 +20,7 @@ To recreate this project, you will need:
 - 1x Adafruit IO compatible Feather
 - 3x jumper wires
 - 1x 10k resistor
+- Processing
 - 1x photocell
 - 1x plant(s) of your choosing
 - Embroidery hoop
@@ -29,6 +30,33 @@ To recreate this project, you will need:
 ** all materials can be found at [Blick Art Materials](https://www.dickblick.com/)
 
 ### Data input
-Arduino Wiring
+The main way plants are going to input their state is via sensors. I've chosen to work with a photoresistor because you can get a lot of variance in data points, which in turn creates a more visually-pleasing output.
+
+__Wiring__
 
 ![wiring](photo.png)
+
+After you've wired everything, upload the Photo_Cell code to your feather.
+
+This is what the code looks like
+
+![wiring](1.png)
+
+In the code, we are reading photoresistors values and sending them to Processing. We've also making a call to an API that structures a sentence when provided with a list of words. The words are randomly chosen for and array of strings. The sentence that is received from the API is then published on an MQTT server.
+
+This is what you should see when you subscribe to the topic on the MQTT side:
+
+![wiring](3.png)
+
+Now that you're reading analog data, sending it to processing, and publishing to a channel, it's time to work on the processing code.
+
+Download the processing software and run the code named processing.
+
+**Important notes**
+- Your feather must powered on and running the code to send data to processing.
+- Processing uses your port so you cant have the IDE serial monitor open
+- You must find your port number and change that in the code
+
+Here is what the processing code looks like:
+
+![wiring](pro.png)
